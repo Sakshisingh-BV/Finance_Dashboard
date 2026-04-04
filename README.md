@@ -92,6 +92,9 @@ src/
 
 ---
 
+## 🌐 Live Demo  
+👉 https://finance-dashboard-three-ruddy.vercel.app
+
 ## 🧠 Approach & Design Decisions
 
 ### State Management
