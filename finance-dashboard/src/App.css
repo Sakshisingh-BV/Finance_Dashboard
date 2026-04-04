@@ -1,0 +1,346 @@
+/* ── Animations ───────────────────────────────────────────────── */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out both;
+}
+
+.animate-modal-in {
+  animation: modalIn 0.3s ease-out both;
+}
+
+/* ── Recharts Dark Mode Overrides ────────────────────────────── */
+
+.dark .recharts-cartesian-grid line {
+  stroke: #334155;
+}
+
+.dark .recharts-legend-item-text {
+  color: #94a3b8 !important;
+}
+
+.dark .recharts-text {
+  fill: #64748b !important;
+}
+
+/* ── Focus ring utility ──────────────────────────────────────── */
+
+*:focus-visible {
+  outline: 2px solid rgba(124, 58, 237, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Number input spinner removal ────────────────────────────── */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   From Uiverse.io by satyamchaudharydev — Summary Cards
+   Scoped under .summary-cards-grid to avoid conflicts
+   ══════════════════════════════════════════════════════════════════ */
+
+.summary-cards-grid .card {
+  --primary-clr: #1C204B;
+  --dot-clr: #BBC0FF;
+  border-radius: 10px;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  display: grid;
+  cursor: pointer;
+  grid-template-rows: 50px 1fr;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-cards-grid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(28, 32, 75, 0.3);
+}
+
+.summary-cards-grid .card:hover .img-section {
+  transform: translateY(1em);
+}
+
+.summary-cards-grid .card-desc {
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+  top: -10px;
+  display: grid;
+  gap: 10px;
+  background: var(--primary-clr);
+}
+
+.summary-cards-grid .card-time {
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+.summary-cards-grid .img-section {
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-cards-grid .card-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.summary-cards-grid .card-title {
+  flex: 1;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.summary-cards-grid .card-menu {
+  display: flex;
+  gap: 4px;
+  margin-inline: auto;
+}
+
+.summary-cards-grid .card svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.summary-cards-grid .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--dot-clr);
+}
+
+.summary-cards-grid .recent {
+  line-height: 1.4;
+  font-size: 0.8em;
+}
+
+@media (max-width: 767px) {
+  .dashboard-summary-mobile-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: start;
+    grid-auto-rows: 1fr;
+  }
+
+  .dashboard-summary-mobile-grid > * {
+    min-width: 0;
+  }
+
+  .dashboard-chart-mobile-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: start;
+  }
+
+  .dashboard-chart-mobile-grid > * {
+    min-width: 0;
+  }
+
+  .dashboard-insights-mobile-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: start;
+    grid-auto-rows: 1fr;
+  }
+
+  .dashboard-insights-mobile-grid > * {
+    min-width: 0;
+  }
+
+  .summary-cards-grid .card {
+    grid-template-rows: 32px 1fr;
+  }
+
+  .summary-cards-grid .card-desc {
+    top: -4px;
+    padding: 8px 7px 7px;
+    gap: 4px;
+  }
+
+  .summary-cards-grid .card-header {
+    align-items: flex-start;
+  }
+
+  .summary-cards-grid .card-title {
+    font-size: 0.64em;
+    line-height: 1.15;
+  }
+
+  .summary-cards-grid .card-time {
+    font-size: 0.92rem;
+    line-height: 1.1;
+    word-break: break-word;
+  }
+
+  .summary-cards-grid .card-menu {
+    display: none;
+  }
+
+  .summary-cards-grid .recent {
+    min-height: 22px;
+  }
+
+  .summary-cards-grid .recent span {
+    font-size: 0.56em !important;
+    line-height: 1.2;
+  }
+}
+
+/* ── Light Mode Card Outline ─────────────────────────────────── */
+
+.light-outline-card {
+  border-color: #1e293b !important;
+}
+
+.dark .light-outline-card {
+  border-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.dark .dashboard-dark-outline-card {
+  border-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Gooey add transaction button */
+.c-button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  overflow: hidden;
+  padding: 0.72em 1.15em;
+  border: 0;
+  background: transparent;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.c-button__text {
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.c-button--gooey {
+  border: 3px solid #7c3aed;
+  border-radius: 0;
+  color: #7c3aed;
+  letter-spacing: 0.8px;
+  text-transform: none;
+  transition: color 700ms ease, border-color 700ms ease, transform 250ms ease;
+}
+
+.c-button--gooey:hover {
+  color: #fff;
+}
+
+.c-button--gooey:active {
+  transform: translateY(1px);
+}
+
+.c-button--gooey .c-button__blobs {
+  position: absolute;
+  inset: 0 -1px -3px 0;
+  z-index: -1;
+  overflow: hidden;
+  filter: url(#goo);
+}
+
+.c-button--gooey .c-button__blobs div {
+  position: absolute;
+  height: 100%;
+  width: 34%;
+  border-radius: 999px;
+  background-color: #7c3aed;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: transform 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+.c-button--gooey-submit {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.95rem 1.15rem;
+}
+
+@media (max-width: 767px) {
+  .c-button--gooey-submit {
+    padding: 0.8rem 1rem;
+    font-size: 12px;
+  }
+}
