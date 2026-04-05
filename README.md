@@ -12,7 +12,7 @@ A clean, interactive finance dashboard built with **React + Vite** to track inco
 
 ```bash
 # 1. Clone the repository
-git clone <repo-url>
+git clone <https://github.com/Sakshisingh-BV/Finance_Dashboard.git>
 cd finance-dashboard
 
 # 2. Install dependencies
@@ -96,6 +96,14 @@ src/
 👉 https://finance-dashboard-three-ruddy.vercel.app
 
 ## 🧠 Approach & Design Decisions
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Transactions
+![Transactions](./screenshots/transactions.png)
 
 ### State Management
 - Used **Context API + `useReducer`** for a clean, centralized state without external libraries.
