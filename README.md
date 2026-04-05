@@ -100,10 +100,10 @@ src/
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshots/dashboard(2).png)
 
 ### Transactions
-![Transactions](./screenshots/transactions.png)
+![Transactions](./screenshots/Transactions.png)
 
 ### State Management
 - Used **Context API + `useReducer`** for a clean, centralized state without external libraries.
