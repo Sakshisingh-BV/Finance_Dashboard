@@ -1,4 +1,4 @@
-Zorvy Frontend-role Assessment repo
+Zorvyn Frontend-role Assessment repo
 # 💰 FinTrack – Personal Finance Dashboard
 
 A clean, interactive finance dashboard built with **React + Vite** to track income, expenses, and spending patterns. Designed as a frontend assessment project demonstrating component architecture, state management, and modern UI design.
